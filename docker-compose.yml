@@ -1,0 +1,16 @@
+services:
+  cadence:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      # Set to "true" when Cadence sits behind a reverse proxy that terminates HTTPS.
+      TRUST_PROXY: "false"
+      # Optional: pick your own one-time setup token instead of reading it from the logs.
+      # SETUP_TOKEN: "replace-with-a-long-random-string"
+    volumes:
+      - cadence-data:/data
+
+volumes:
+  cadence-data:

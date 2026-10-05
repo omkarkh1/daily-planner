@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#111114" media="(prefers-color-scheme: dark)" />
+    <title>Sign in · Cadence</title>
+    <link rel="icon" href="/icons/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="/js/theme.js"></script>
+    <script type="module" src="/js/login.js"></script>
+  </head>
+  <body class="auth-page">
+    <main class="auth-card">
+      <span class="brand"><img class="brand-mark" src="/icons/icon.svg" alt="" />Cadence</span>
+      <h1>Welcome back</h1>
+      <p class="lede">Every check you make is a vote for who you’re becoming.</p>
+
+      <form id="login-form" novalidate>
+        <p class="form-error" id="login-error" role="alert" hidden></p>
+        <div class="field">
+          <label for="username">Username</label>
+          <input class="input" id="username" name="username" autocomplete="username" autocapitalize="none" spellcheck="false" required />
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input class="input" id="password" name="password" type="password" autocomplete="current-password" required />
+        </div>
+        <div class="field" id="code-field" hidden>
+          <label for="code">Authenticator code</label>
+          <input class="input code" id="code" name="code" inputmode="numeric" autocomplete="one-time-code" maxlength="6" pattern="\d{6}" placeholder="000000" />
+        </div>
+        <button class="btn btn-primary btn-block" id="login-submit" type="submit">Sign in</button>
+      </form>
+
+      <div class="auth-mini-grid" aria-hidden="true">
+        <i class="a"></i><i class="a"></i><i></i><i class="a"></i><i class="a"></i><i class="a"></i><i></i>
+        <i class="g"></i><i></i><i class="g"></i><i class="g"></i><i></i><i class="g"></i><i class="g"></i>
+        <i class="b"></i><i class="b"></i><i class="b"></i><i></i><i class="b"></i><i class="b"></i><i class="b"></i>
+        <i class="v"></i><i class="v"></i><i></i><i class="v"></i><i class="v"></i><i></i><i class="v"></i>
+      </div>
+      <p class="auth-foot">Private tracker · only you can sign in</p>
+    </main>
+  </body>
+</html>

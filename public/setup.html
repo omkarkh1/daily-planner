@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#111114" media="(prefers-color-scheme: dark)" />
+    <title>Create your account · Cadence</title>
+    <link rel="icon" href="/icons/icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="/js/theme.js"></script>
+    <script type="module" src="/js/setup.js"></script>
+  </head>
+  <body class="auth-page">
+    <main class="auth-card">
+      <span class="brand"><img class="brand-mark" src="/icons/icon.svg" alt="" />Cadence</span>
+      <h1>Make it yours</h1>
+      <p class="lede">Create the one account that can open this tracker. Day one starts now.</p>
+
+      <form id="setup-form" novalidate>
+        <p class="form-error" id="setup-error" role="alert" hidden></p>
+        <div class="field" id="token-field">
+          <label for="token">Setup token</label>
+          <input class="input" id="token" name="token" autocomplete="off" spellcheck="false" required />
+          <p class="hint">Printed in the server log when it started.</p>
+        </div>
+        <div class="field">
+          <label for="username">Username</label>
+          <input class="input" id="username" name="username" autocomplete="username" autocapitalize="none" spellcheck="false" maxlength="64" required />
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input class="input" id="password" name="password" type="password" autocomplete="new-password" minlength="8" required />
+          <p class="hint">At least 8 characters. A long passphrase is easiest to remember.</p>
+        </div>
+        <div class="field">
+          <label for="confirm">Confirm password</label>
+          <input class="input" id="confirm" name="confirm" type="password" autocomplete="new-password" required />
+        </div>
+        <button class="btn btn-primary btn-block" id="setup-submit" type="submit">Create account</button>
+      </form>
+    </main>
+  </body>
+</html>
